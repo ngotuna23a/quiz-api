@@ -1,5 +1,7 @@
 package com.quizeffect.quiz_api.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +22,9 @@ public class Question {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Answer> answers;
+    
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 
@@ -31,4 +36,7 @@ public class Question {
 
     public Category getCategory() { return category; }
     public void setCategory(Category category) { this.category = category; }
+
+    public List<Answer> getAnswers() { return answers; }
+    public void setAnswers(List<Answer> answers) { this.answers = answers; }
 }
