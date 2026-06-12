@@ -7,6 +7,7 @@ import com.quizeffect.quiz_api.repository.AnswerRepository;
 import com.quizeffect.quiz_api.repository.QuizResultRepository;
 import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class QuizResultService {
@@ -47,5 +48,8 @@ public class QuizResultService {
 
         // Lưu trực tiếp vào bảng quiz_results trong MySQL
         return quizResultRepository.save(result);
+    }
+    public List<QuizResult> getResultsByUser(Long userId) {
+        return quizResultRepository.findByUserId(userId);
     }
 }

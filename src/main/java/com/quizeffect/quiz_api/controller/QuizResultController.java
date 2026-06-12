@@ -3,6 +3,9 @@ package com.quizeffect.quiz_api.controller;
 import com.quizeffect.quiz_api.dto.SubmitQuizRequest;
 import com.quizeffect.quiz_api.entity.QuizResult;
 import com.quizeffect.quiz_api.service.QuizResultService;
+
+import java.util.List;
+
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -19,5 +22,9 @@ public class QuizResultController {
     @PostMapping("/submit")
     public QuizResult submit(@RequestBody SubmitQuizRequest request) {
         return quizResultService.calculateAndSaveScore(request);
+    }
+    @GetMapping("/history/{userId}")
+    public List<QuizResult> getHistory(@PathVariable Long userId) {
+        return quizResultService.getResultsByUser(userId);
     }
 }
