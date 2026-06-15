@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Big Data",
+    "description": "Môn học cấu hình Hadoop, Apache Spark và xử lý dữ liệu lớn",
+    "questions": [
+      {
+        "content": "Thành phần nào trong Hadoop chịu trách nhiệm quản lý tài nguyên và điều phối lịch trình tác vụ?",
+        "difficulty": "EASY",
+        "answers": [
+          { "content": "HDFS", "isCorrect": false },
+          { "content": "YARN", "isCorrect": true },
+          { "content": "MapReduce", "isCorrect": false },
+          { "content": "Hive", "isCorrect": false }
+        ]
+      },
+      {
+        "content": "Trong Apache Spark, RDD viết tắt của cụm từ nào?",
+        "difficulty": "MEDIUM",
+        "answers": [
+          { "content": "Resilient Distributed Dataset", "isCorrect": true },
+          { "content": "Remote Data Distribution", "isCorrect": false },
+          { "content": "Redundant Data Directory", "isCorrect": false },
+          { "content": "Resource Direct Allocation", "isCorrect": false }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Lịch sử Đảng",
+    "description": "Môn học về Lịch sử Đảng Cộng sản Việt Nam",
+    "questions": [
+      {
+        "content": "Đảng Cộng sản Việt Nam được thành lập vào ngày tháng năm nào?",
+        "difficulty": "EASY",
+        "answers": [
+          { "content": "03/02/1930", "isCorrect": true },
+          { "content": "02/09/1945", "isCorrect": false },
+          { "content": "19/05/1890", "isCorrect": false },
+          { "content": "22/12/1944", "isCorrect": false }
+        ]
+      },
+      {
+        "content": "Hội nghị thành lập Đảng Cộng sản Việt Nam đầu năm 1930 diễn ra tại đâu?",
+        "difficulty": "EASY",
+        "answers": [
+          { "content": "Hương Cảng (Hồng Kông, Trung Quốc)", "isCorrect": true },
+          { "content": "Quảng Châu (Trung Quốc)", "isCorrect": false },
+          { "content": "Cao Bằng (Việt Nam)", "isCorrect": false },
+          { "content": "Pa-ri (Pháp)", "isCorrect": false }
+        ]
+      }
+    ]
+  }
+]
