@@ -1,5 +1,6 @@
 package com.quizeffect.quiz_api.controller;
 
+import com.quizeffect.quiz_api.dto.ImportQuizRequest;
 import com.quizeffect.quiz_api.entity.Category;
 import com.quizeffect.quiz_api.service.CategoryService;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +12,6 @@ public class CategoryController {
 
     private final CategoryService categoryService;
 
-    // Sử dụng Constructor Injection chuẩn doanh nghiệp
     public CategoryController(CategoryService categoryService) {
         this.categoryService = categoryService;
     }
@@ -24,5 +24,11 @@ public class CategoryController {
     @PostMapping
     public Category create(@RequestBody Category category) {
         return categoryService.createCategory(category);
+    }
+
+    @PostMapping("/import")
+    public String importBulk(@RequestBody List<ImportQuizRequest> requests) {
+        categoryService.importBulkData(requests);
+        return "Import dữ liệu hàng loạt thành công!";
     }
 }

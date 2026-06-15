@@ -1,5 +1,7 @@
 package com.quizeffect.quiz_api.entity;
 
+import java.util.List;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -24,4 +26,9 @@ public class Category {
 
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
+
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Question> questions;
+    public List<Question> getQuestions() { return questions;}
+    public void setQuestions(List<Question> questions) { this.questions = questions; }
 }
